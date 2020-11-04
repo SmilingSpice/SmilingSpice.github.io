@@ -1,2 +1,2 @@
-# SmilingSpice.github.io
-Learn cooking.
+# SmilingSpice
+"Learn cooking.
