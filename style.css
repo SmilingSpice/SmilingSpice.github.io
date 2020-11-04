@@ -57,13 +57,24 @@ header {
 }
 
 .hero-text-box {
-      position: absolute;
+      position: relative;
       width: 1140px;
-      top: 50%;
-      left: 50%;
+      top: 40%;
+      left: 70%;
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
+
+.firsts {
+    font-style: ;
+}
+.buttons-class {
+    margin-left: -8%;
+}
+
+.follow {
+    margin-left: 48.5%;
+}
 
 .logo {
     height: 100px;
@@ -583,26 +594,9 @@ footer {
     font-size: 80%;
 }
 
-.footer-nav {
-    list-style: none;
-    float: left;
-}
 
-.social-links {
-    list-style: none;
-    float: right;
-}
 
-.footer-nav li,
-.social-links li {
-    display: inline-block;
-    margin-right: 20px;
-}
 
-.footer-nav li:last-child,
-.social-links li:last-child {
-    margin-right: 0;
-}
 
 .footer-nav li a:link,
 .footer-nav li a:visited,
@@ -678,3 +672,17 @@ footer p {
 .js--wp-3.animated {
     opacity: 1;
 i}
+.aboutus {
+    background-color: rgb(69, 71, 71);
+    
+}
+
+.nameofabout {
+        color: red;
+        margin-left: 25%;
+        margin-top: -3%;
+}
+
+.end {
+    margin-left: 35%;
+}
