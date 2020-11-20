@@ -14,10 +14,14 @@
    <link rel="stylesheet" type="text/css" href="queries.css">
    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic" rel="stylesheet" type="text/css">
    <link rel="shortcut icon" type="image/png" href="assets/smilingspice.png">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
    <title>SmilingSpice</title>
 </head>
 
 <body>
+   
+   
    <header>
       <nav>
          <div class="row">
@@ -122,5 +126,15 @@
                <p>
                   copyright &copy; 2020 by SmilingSpice. All rights reserved.
                </p>
-            </div>
+
+               <div class="loader-wrapper">
+                  <span class="loader"><span class="loader-inner"></span></span>
+               </div>
+   
+               <script>
+                  $(window).on("load",function(){
+                     
+                     $(".loader-wrapper").fadeOut("slow");
+                  });
+               </script>
       </footer>
