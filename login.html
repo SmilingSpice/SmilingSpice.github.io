@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <title>Login to SmilingSpice</title>
-    <meta name="google-signin-client_id" content="93004539938-877gkk04o1fdflc3p8l48rj95dm9cegl.apps.googleusercontent.com">
+    <title></title>
+    <meta name="google-signin-client_id" content="93004539938-dnvk0efk7u7usjh5nv9s7qsnuksqrcrv.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
     <h1>Login to SmilingSpice with your google account</h1>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div id="content"></div>
+    <button onclick="signOut()">Sign Out</button>
 </body>
 
     <script>
         function onSignIn(googleUser) {
-            console.log('User is ' + JSON.stringify(googleUser.getBasicProfile()))
+            var profile = googleUser.getBasicProfile()
+            console.log('User is ' + JSON.stringify(profile))
+
+            var element = document.querySelector('#content')
+            element.innerText = profile.getGivenName();
+
+            var image = document.createElement('img');
+            image.setAttribute('src', profile.getImageUrl())
+            element.append(image)
         }        
+
+        function signOut() {
+            gapi.auth2.getAuthInstance().signOut().then(function() {
+                console.log('user signed out')
+                
+            })
+        }
     </script>
 </html>
